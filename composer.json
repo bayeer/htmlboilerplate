@@ -1,0 +1,10 @@
+{
+    "name": "bayeer/htmlboilerplate.dev",
+    "type": "project",
+    "require": {
+        "phpmailer/phpmailer": "^5.2"
+    },
+    "autoload": {
+		"psr-4": {"App\\": "app"}
+    }
+}

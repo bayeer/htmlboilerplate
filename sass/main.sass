@@ -1,0 +1,374 @@
+@import "variables"
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap"
+
+@font-face
+    font-family: 'wiguru_1regular'
+    font-weight: normal
+    font-style: normal
+    src: url('/fonts/9386-webfont.eot')
+    src: url('/fonts/9386-webfont.eot?#iefix') format('embedded-opentype'),url('/fonts/9386-webfont.woff2') format('woff2'),url('/fonts/9386-webfont.woff') format('woff'), url('/fonts/9386-webfont.svg#wiguru_1regular') format('svg')
+body
+    font-family: 'wiguru_1regular', sans-serif
+
+.page-container
+    width: 1000px !important
+    margin: 0 auto
+
+.modal
+    text-align: center
+
+@media screen and (min-width: 768px) 
+    .modal:before
+        display: inline-block
+        vertical-align: middle
+        content: " "
+        height: 100%
+
+.modal-dialog
+    display: inline-block
+    text-align: left
+    vertical-align: middle
+
+.form-control
+    border-radius: 0
+    border: 0
+
+.btn-primary
+    border-radius: 0
+    background-color: #ff4905
+    border: 1px solid #ff4905
+    &:hover, &:active, &:focus
+        background-color: #c33
+        border: 1px solid #ff4905
+    &:active:focus
+        background-color: #f00
+.btn-primary[disabled]:hover, .btn-primary[disabled]:focus
+    background-color: #ff4905
+    border: 0
+
+/*** top menu ***/
+
+.navbar-spectech
+    background-color: rgba(0,0,0,0.5)
+    a
+        color: #eee
+    .navbar-brand
+        height: auto
+        padding: 10px 5px
+    .navbar-nav > li
+        text-align: center
+        padding-right: 30px
+        &:last-child
+            padding-right: 0
+    .navbar-nav > li > a
+        color: #eee
+        display: inline-block
+        padding: 15px
+        line-height: 52px
+        font-size: 13pt
+        font-weight: normal
+    .navbar-nav > .active > a
+        background-color: transparent
+    .nav > li > a:hover, .nav > li > a:focus,
+    .navbar-nav > .active > a:hover,
+    .navbar-nav > .active > a:focus
+        background-color: rgba(247,209,2,0.7)
+    .navbar-right
+        color: #eee
+        font-size: 24pt
+        font-weight: normal
+        line-height: 0.7em
+        span
+            display: block
+            margin-top: 22px
+        i
+            font-size: 12pt
+            font-style: normal
+            line-height: 1em
+    .navbar-toggle:focus, .navbar-toggle:hover
+        background-color: rgba(255,255,255,0.5)
+
+
+
+
+
+/*** hero ***/
+
+.main-offer
+    padding-bottom: 200px
+    background: url(/img/hero-bg2.jpg) no-repeat center center 
+    -webkit-background-size: cover
+    -moz-background-size: cover
+    -o-background-size: cover
+    background-size: cover
+    .jumbotron
+        background-color: transparent
+        padding-left: 0
+        padding-top: 120px
+    .jumbotron h1
+        color: #000
+    .jumbotron p
+        background-color: #FF0
+    .jumbotron ul
+        list-style-type: none
+        padding: 0
+    .jumbotron li
+        margin-bottom: 2px
+        font-size: 16pt
+    .jumbotron li span
+        display: inline-block
+        padding: 0 5px
+        background-color: #f7d102
+    .jumbotron li b
+        font-size: 22pt
+        font-weight: normal
+    #frm-hero
+        float: right
+        width: 300px
+        margin: 0 auto
+        background: transparent url(/img/hero-form-bg.png) repeat-x left top
+        padding: 18px 12px 10px 12px
+        margin-top: 50%
+        legend
+            border-bottom: 0
+            b
+                font-size: 1.4em
+                line-height: 0.1em
+
+
+
+
+/*** advantages ***/
+.advantages
+    background: #f7d102 url(/img/advantages-bg.png) repeat-x left top
+    &:after
+        content: '.'
+        font-size: 0%
+        line-height: 0%
+        display: block
+        bottom: 0
+        background: #f7d102 url(/img/advantages-bg2.jpg) repeat-x left bottom
+        width: 100%
+        height: 50px
+    .container
+        padding: 40px
+    .item
+        text-align: center
+    .item h4
+        color: #ff4905
+        text-decoration: underline
+        font-size: 18pt
+        font-weight: normal
+
+
+
+/*** techs and prices ***/
+.mech-item
+    font-size: 12pt
+    margin-bottom: 30px
+    padding: 0 30px
+    ul
+        padding-left: 20px
+        margin-bottom: 20px
+        i
+            font-style: normal
+            display: inline-block
+            background-color: #f7d102
+            padding: 0px 5px
+    .box
+        position: relative
+        border: 3px solid #333
+        padding: 15px 0
+        margin-bottom: 10px
+        text-align: center
+        .title
+            padding-left: 10px
+            padding-top: 5px
+            background-color: #f7d102
+            font-size: 18pt
+            text-align: left
+        .pull-right
+            text-align: left
+            position: relative
+            top: -5px
+            padding: 5px 10px 0 10px
+            background-color: #ff4905
+            color: #fff
+        &:after
+            content: '.'
+            display: block
+            position: absolute
+            font-size: 0%
+            line-height: 0%
+            top: -10px
+            left: 40px
+            width: 40px
+            height: 20px
+            background-color: #fff
+.mechs-and-prices
+    .col-sm-6:nth-child(odd)
+        .box:after
+            left: auto
+            right: 50px
+
+
+
+/*** reviews ***/
+.reviews
+    background: #f5f5f5 url(/img/reviews-bg.png) repeat-x top left
+    padding-bottom: 70px
+    h2
+        margin-top: 90px
+        margin-bottom: 100px
+    .wrapper
+        position: relative
+        height: 330px
+    .review
+        z-index: 10
+        //position: absolute
+        bottom: 20px
+        padding: 0 30px
+        font-size: 14pt
+        text-align: center
+        h3
+            margin-bottom: 30px
+        p
+            color: #444
+    .item
+        .wrapper:nth-child(odd)
+            .review
+                border-right: 1px solid #333
+    .carousel
+        height: 330px
+    .carousel-control
+        top: auto
+    .carousel-control.left
+        left: 38%
+        background-image: none
+        color: #000
+    .carousel-control.right
+        right: 38%
+        background-image: none
+        color: #000
+
+
+
+/*** photogallery ***/
+.photogallery
+    padding: 0px 0px 137px 0px
+    background: transparent url(/img/photogallery-bg.jpg) no-repeat center center
+    -webkit-background-size: cover
+    -moz-background-size: cover
+    -o-background-size: cover
+    background-size: cover
+    h2
+        margin: 0
+        margin-bottom: 55px
+    h2 span
+        width: 300px
+        display: inline-block
+        background-color: #f7d102
+        border-radius: 0px 0px 20px 20px
+        padding: 30px 0
+    .container
+        width: 700px
+        margin: 0 auto
+    .item
+        height: auto
+    .carousel-control
+        top: 43%
+        bottom: auto
+        width: auto
+        left: -30px
+        color: rgba(247,209,2,0.8)
+    .carousel-control.right
+        left: auto
+        right: -30px
+
+
+
+/*** contacts ***/
+.contacts
+    position: relative
+    height: 440px
+    #yandex-map
+        position: absolute
+        z-index: 1
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+    .box
+        position: relative
+        margin-top: 20px
+        padding: 10px
+        top: 23px
+        right: 10px
+        float: right
+        width: 280px
+        height: 335px
+        z-index: 10
+        text-align: center
+        box-sizing: content-box !important
+        background: transparent url(/img/hero-form-bg.png) repeat-x left top
+
+/*** footer ***/
+footer
+    background: transparent url(/img/advantages-bg.png) repeat-x left top
+    padding: 35px 0 25px 0
+    font-size: 12pt
+
+.up
+    display: none
+    z-index: 100
+    position: fixed
+    bottom: 80px
+    right: 5%
+    img
+        width: 80%
+
+
+@media (max-width: 768px)
+    .main-offer
+        .jumbotron
+            padding-top: 70px
+            margin-left: 50px
+        .jumbotron h1
+            margin-top: 0
+            color: white
+            font-size: 3em
+        #frm-hero
+            margin-top: 70px
+
+    .navbar-spectech
+        .navbar-nav > li
+            text-align: right
+            padding-right: 0
+        .navbar-nav > li > a
+            display: block
+        .navbar-toggle
+            margin-top: 25px
+
+    .photogallery
+        padding: 0px 0px 50px 0px
+        .container
+            width: auto
+        .carousel-control
+            top: 0
+            bottom: 0
+            width: 40px
+        .carousel-control.left
+            left: 0px
+        .carousel-control.right
+            left: auto
+            right: 0px
+
+@media (max-width: 767px)
+    .main-offer
+        #frm-hero
+            margin-top: 0
+            float: none
+
+@media (max-width: 500px)
+    .photogallery
+        padding: 0px 0px 30px 0px
